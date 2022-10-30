@@ -1,0 +1,24 @@
+<%- include("headerHome")  %>
+
+<body>
+    <h1>Hey <%= user %></h1><br><br>
+
+    <h4>Your Posts</h4><br><br><br>
+
+
+   <% dbPosts.forEach((post)=>{ %>
+    <br>
+    <h4><%= post.title %></h4>
+    <h5><%= post.text %></h5>
+
+    <h6>Post was created: <%= post.createdAt %></h6>
+
+
+    <% }) %>
+
+
+    <a href="http://localhost:3000/old/update">Edit a Post</a>
+    <a href="http://localhost:3000/old/delete">Delete a Post</a>
+    <a href="http://localhost:3000/old/newpost">Make a Post</a>
+    <a href="http://localhost:3000/old/deleteuser">Delete account</a>
+</body>

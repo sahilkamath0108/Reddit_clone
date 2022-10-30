@@ -1,0 +1,17 @@
+<%- include("headerHome")  %>
+
+<body>
+    <h2>Welcome to the general page.</h2><br><br><br>
+
+    <% allPosts.forEach((posts)=>{   %>
+
+        <h3>Post made by <%= posts.username %></h3><br>
+
+        <h3><%= posts.title %></h3>
+
+        <h4><%= posts.text %></h4>
+        
+        <h6><%= posts.createdAt %></h6><br><br><br>
+
+    <% }) %>
+</body>
